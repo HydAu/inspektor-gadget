@@ -1,0 +1,12 @@
+name: mygadget
+description: Example gadget
+homepageURL: http://mygadget.com
+documentationURL: https://mygadget.com/docs
+sourceURL: https://github.com/my-org/mygadget/
+datasources:
+  open:
+    fields:
+      filename:
+        annotations:
+           description: Path of the file being opened
+           columns.width: 64
