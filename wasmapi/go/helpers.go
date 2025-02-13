@@ -16,8 +16,8 @@ package api
 
 // TODO: is it possible to make it work without cgo?
 
-// #include <stdlib.h>
-import "C"
+// // #include <stdlib.h>
+// import "C"
 
 import (
 	"bytes"
@@ -36,7 +36,7 @@ func (b bufPtr) free() {
 	if b == 0 {
 		return
 	}
-	C.free(unsafe.Pointer(uintptr(b & 0xFFFFFFFF)))
+	//C.free(unsafe.Pointer(uintptr(b & 0xFFFFFFFF)))
 }
 
 // stringToBufPtr returns a bufPtr that encodes the pointer and length of the

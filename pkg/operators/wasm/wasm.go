@@ -275,10 +275,10 @@ func (i *wasmOperatorInstance) init(
 	}
 
 	// We need to call malloc on the guest to pass strings
-	i.guestMalloc = mod.ExportedFunction("malloc")
-	if i.guestMalloc == nil {
-		return errors.New("wasm module doesn't export malloc")
-	}
+	// i.guestMalloc = mod.ExportedFunction("malloc")
+	// if i.guestMalloc == nil {
+	// 	return errors.New("wasm module doesn't export malloc")
+	// }
 
 	i.dataSourceCallback = mod.ExportedFunction("dataSourceCallback")
 
